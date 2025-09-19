@@ -28,11 +28,16 @@ mod arch;
 #[path = "arch/aarch64.rs"]
 mod arch;
 
+#[cfg(target_arch = "powerpc64")]
+#[path = "arch/powerpc64.rs"]
+mod arch;
+
 #[cfg(not(any(
     target_arch = "x86_64",
     target_arch = "x86",
     target_arch = "arm",
-    target_arch = "aarch64"
+    target_arch = "aarch64",
+    target_arch = "powerpc64"
 )))]
 #[path = "arch/unsupported.rs"]
 mod arch;

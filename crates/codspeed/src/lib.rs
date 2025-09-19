@@ -1,5 +1,6 @@
 pub mod codspeed;
 
+#![feature(asm_experimental_arch)]
 #[cfg(unix)]
 pub mod fifo;
 
